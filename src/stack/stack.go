@@ -30,7 +30,7 @@ func (s *Stack) Push(element int) error {
 	}
 
 	s.top++
-	s.elements[s.top] = element
+	s.elements = append(s.elements, element)
 
 	return nil
 }
