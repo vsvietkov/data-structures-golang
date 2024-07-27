@@ -1,7 +1,7 @@
 .PHONY: test benchmark
 
 test:
-	go test -v ./tests/...
+	go test ./tests/...
 
 benchmark:
 	go test -v -bench=. ./benchmarks/... -benchmem

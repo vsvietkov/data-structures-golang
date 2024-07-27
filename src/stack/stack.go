@@ -46,3 +46,16 @@ func (s *Stack) Pop() (int, error) {
 
 	return element, nil
 }
+
+func (s *Stack) Peek() (int, error) {
+	if s.top == -1 {
+		return -1, fmt.Errorf("stack underflow: cannot peek from an empty stack")
+	}
+
+	return s.elements[s.top], nil
+}
+
+// GetElements for testing purposes
+func (s *Stack) GetElements() []int {
+	return s.elements
+}
